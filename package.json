@@ -1,0 +1,40 @@
+{
+  "name": "back",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+   "dependencies": {
+    "body-parser": "~1.17.1",
+    "bower": "^1.8.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "bcryptjs": "^2.2.1",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "compression": "^1.5.2",
+    "cors": "^2.7.1",
+    "dotenv": "^1.2.0",
+    "express": "^4.13.3",
+    "json2csv": "^3.7.3",
+    "jsonwebtoken": "^5.0.4",
+    "moment": "^2.10.6",
+    "mongoose": "^4.1.1",
+    "mongoose-paginate": "^4.0.1",
+    "mongoose-timestamp": "^0.4.0",
+    "morgan": "^1.6.1",
+    "multer": "^1.2.1",
+    "raven": "^0.8.1",
+    "sendgrid": "^4.10.0",
+    "twilio": "^2.11.1"
+   },
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "babel-core": "^5.8.21",
+    "mocha": "^2.2.5",
+    "node-inspector": "^0.12.2",
+    "nodemon": "^1.4.0"
+  }
+}
+

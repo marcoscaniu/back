@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="aplicacion" style="background-color:red;">
+<head>
+	<title>Angular</title>
+	 <link rel="stylesheet" type = "text/css" href="../css/bootstrap.min.css"> 
+    <script src="../js/bootstrap/jquery-2.1.4.min.js" rel="stylesheet"></script>
+    <script src="../js/bootstrap/bootstrap.min.js" rel="stylesheet"></script>
+</head>
+<body>
+            <nav class="navbar  navbar">
+                <div class="container-fluid   ">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
+                            <span class="sr-only">Menu</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="inicio.jsp"class="navbar-brand">Logo</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="quienesSomos.jsp">Quienes somos</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    Categorias <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="productosPorCategoria.jsp?nomb=pc">PC</a></li>
+                                    <li><a href="productosPorCategoria.jsp?nomb=ps3">PS3</a></li>
+                                    <li><a href="productosPorCategoria.jsp?nomb=x-box">X-BOX</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form action="productosBuscado.jsp" class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input name="buscar" type="text" class="form-control " placeholder="Buscar juego"/>
+                                <button class="btn btn-success  center-block form-control">
+                                    <font color="white"><span class="glyphicon glyphicon-search"></span></font></button>
+                            </div>
+                        </form>
+                        <ul class="nav navbar-right  ">
+                            <form action="sesionCliente.jsp" class="navbar-form navbar-left bg-primary">
+                                <div class="form-group">
+                                    <b><button class="btn btn-primary  center-block form-control">
+                                            <font color="white"></font>Iniciar Sesion </button></b>
+                                </div>
+                            </form>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            {{datoScope}}
+</body>
+</html>

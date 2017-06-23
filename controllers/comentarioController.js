@@ -1,6 +1,6 @@
 "use strict"
-var mongoose=require("mongoose"),
-Comentario=mongoose.model("comentario");
+var mongoose=require("mongoose");
+var Comentario=require("../models/comentario");
 
 var getErrorMessage=function(err){
 	if(err.errors){
@@ -31,16 +31,14 @@ exports.create=function(req,res){
 };
 
 //crear un nuevo metodo controller que recupera   una lista de los objetos
-// exports.list=function(req,res){
-// //usar el metodo find para obtener la lista de objetos
-	// comentario.find().sort("-created").populate("creador","firstName lastName fullName").
-	// exec(function(err,articles){(
-	// if(err){
-		// return res.status(400).send({
-			// message:getErrorMessage(err)
-		// });
-	// }else{
-		// res.json(comentario);
-	// }
-	// });
-// };
+exports.list=function(req,res){
+//usar el metodo find para obtener la lista de objetos
+
+	 comentario.find({},function(err,comentario){
+	if(err){
+	 	return next(err);
+	 }else{
+	 	res.json(comentario);
+	 }
+	 });
+};

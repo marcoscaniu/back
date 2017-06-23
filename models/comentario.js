@@ -3,8 +3,7 @@ var mongoose=require("mongoose"),
 	
 	
 var ComentarioSchema=new Schema({
-	descripcion:{
-	type:String
-	}
+	descripcion:String
+	
 });
 mongoose.model("comentario",ComentarioSchema);

@@ -1,18 +1,19 @@
 "use strict"
 var mongoose=require("mongoose");
-var comentario=require("../models/comentario");
+var Comentario=require("../models/comentario");
  
 
 
 module.exports={
 	listar:function(req,res){
-	comentario.find().exec((err, unidades) => {
-    if (err) {
-      res.json({success: false, message: err})
-    } else {
-      res.json({success: true, message: unidades})
-    }
-  })
+	mongoose.model("comentarios").find(function(err,docs){
+		if(err){
+			res.send("problemas");
+			console.log(err);
+		}
+		res.send(docs);
+		console.log(docs);
+	})
 }
 
 }

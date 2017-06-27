@@ -8,7 +8,5 @@ var users = require('./users');
 
 router.use('/', users);
 router.use('/comentarios', rutas_comentario);
-// router.use('/', users);
-
 
 module.exports = router;

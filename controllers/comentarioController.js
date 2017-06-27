@@ -2,8 +2,6 @@
 var mongoose=require("mongoose");
 var Comentario=require("../models/comentario");
  
-
-
 module.exports={
 	listar:function(req,res){
 	mongoose.model("comentarios").find(function(err,docs){
